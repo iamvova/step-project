@@ -1,0 +1,338 @@
+:root {
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 1s;
+}
+
+.app__main{
+  height: 100vh;
+  background: url('https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/network.png'), linear-gradient(0deg, rgba(3,0,23,1) 0%, rgba(6,3,78,1) 90%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  z-index: 1;
+  width: 100%;
+  & div nav{
+    padding: 0.5rem 0;
+    width: 100%;
+    -webkit-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.4);
+    z-index: 10;
+    transition: .3s ease-out;
+  }
+}
+
+.nav__scroll-white{
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.nav__top-black{
+  background: rgba(0,0,0,0.4);
+  color: var(--color-white);
+}
+.app__main-flex_center{
+  display: flex;
+  position: fixed;
+}
+.app__main-logo{
+  font-family: var(--font);   
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.app__main-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  & li{
+    list-style: none;
+    
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font);   
+    transition: .3s ease-out;
+
+    display: inline-block;
+    position: relative;
+  }
+}
+.app__list-white li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-black);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.app__list-black li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.app__main-list li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+.app__main-title{
+  padding-top: 150px;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 34px; 
+  font-family: var(--font); 
+  flex-direction: column;  
+}
+
+.app__mouse-bottom {
+  width: 26px;
+  height: 42px;
+  border: 3px solid #fff;
+  border-radius: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 0;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -2px;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 4px;
+    height: 4px;
+    opacity: 1;
+    -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+    transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+    -webkit-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0%, 20% {
+    -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+    transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    opacity: 0.01;
+  }
+}
+@keyframes scroll {
+  0%, 20% {
+    -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+    transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    opacity: 0.01;
+  }
+}
+
+
+.app__main-animate-top{
+  animation-name: slideInDown;
+  animation-duration: 1.2s;
+}
+.app__main-animate-top1{
+  animation-name: slideInDown;
+  animation-duration: 2s;
+
+}
+
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(125px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
+}
+
+
+.app__mobile{
+  display: none;
+}
+
+.app__mobile-icon{
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-white);
+}
+
+
+.app__navbar-smallscreen{
+  z-index: 5555;
+  display: none;
+  overflow-y: hidden;
+  &-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: .5s;
+    flex-direction: column;
+    z-index: 5555;
+  }
+}
+.overlay__close{
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.app__navbar-smallscreen-links{
+  list-style: none;
+  & li{
+    margin: 2rem;
+    cursor: pointer;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font);
+  }
+}
+.app__navbar-smallscreen-links li:hover{
+  color: var(--color-white);
+}
+
+.burger__icon{
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 950px) {
+  .app__main-title{
+    font-size: 28px;
+  }
+  .app__main-list{
+    display: none;
+  }
+  .connect__btn{
+      display: none;
+  }
+  .app__navbar-smallscreen{
+    display: flex;
+  }
+  .app__main-flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app__main{
+    height: 400px;
+    background: url('https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/network.png');
+    background-color: var(--color-darkblue);
+    background-position: center top;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 9999999999;
+  }
+}
+
+.app__main-logo{
+  padding-left: 30px;
+}
+@media screen and (max-width: 650px) {
+  .app__main-title{
+    font-size: 20px;
+  }
+}
+
+
+.connect__btn{
+  margin-right: 20px;
+
+  & button{
+      font-family: var(--font);
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      color: #000;
+      background-color: #ffff04;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover {
+          background-color: #0056b3;
+      }
+      &:active {
+          background-color: #004080;
+      }
+  }
+}
+.main__btn-connect{
+    margin-right: 20px;
+    & button{
+        font-family: var(--font);
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        color: #000;
+        background-color: #ffff04;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #0056b3;
+        }
+        &:active {
+            background-color: #004080;
+        }
+    }
+}

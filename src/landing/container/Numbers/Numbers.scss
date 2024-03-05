@@ -1,0 +1,37 @@
+.numbers__container{
+    padding: 100px 0;
+    background: linear-gradient(0deg, rgba(0,0,46,1) 0%, rgba(3,0,23,1) 100%); 
+}
+
+.counter-item {
+    margin-top: 100px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter-1 {
+    color: #ff6347;
+}
+
+.counter-2 {
+    color: #ffa500;
+}
+
+.counter-3 {
+    color: #4682b4;
+}
+
+.counter-4 {
+    color: #7cfc00;
+}
+
+
+@media screen and (max-width: 950px) {
+    .numbers__counter{
+        flex-direction: column;
+    }
+}
