@@ -35,6 +35,12 @@ code {
   justify-content: center;
   align-items: center;
 }
+.flex__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .flex__sb{
   display: flex;
   justify-content: space-between;
@@ -148,7 +154,10 @@ li{
 .mt-50{
   margin-top: 50px;
 }
-
+.ai-center{
+  display: flex;
+  align-items: center;
+}
 
 
 

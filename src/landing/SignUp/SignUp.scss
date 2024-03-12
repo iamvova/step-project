@@ -1,0 +1,18 @@
+.container__meta{
+    margin-top: 100px;
+    
+}
+.overlay__meta{
+    padding: 50px 15px;
+    border: 1px solid #333;
+    width: 500px;
+}
+.connect__meta{
+    margin-top: 70px;
+}
+.container__meta-img{
+    width: 250px;
+    & img{
+        width: 100%;
+    }
+}

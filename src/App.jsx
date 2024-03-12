@@ -1,25 +1,18 @@
 import React from 'react'
-import Menu from './landing/container/Menu/Menu'
-import AboutUs from './landing/container/AboutUs/AboutUs'
-import Welcome from './landing/container/Welcome/Welcome'
-import Partners from './landing/container/Partners/Partners'
-import AboutProjects from './landing/container/AboutProjects/AboutProjects'
-import Numbers from './landing/container/Numbers/Numbers'
-import Articles from './landing/container/Articles/Articles'
-import Footer from './landing/container/Footer/Footer'
+import { Routes, Route, BrowserRouter} from "react-router-dom";
+import Landing from './landing/Landing';
+import SignUp from './landing/SignUp/SignUp';
+import Profile from './main/profile/Profile';
 
 const App = () => {
   return (
-    <div>
-      <Menu/>
-      <AboutUs />
-      <Welcome />
-      <AboutProjects />
-      <Numbers />
-      <Articles />
-      <Partners />    
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' Component={Landing}/>
+        <Route path='/signup' Component={SignUp}/>
+        <Route path='/profile' Component={Profile}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
