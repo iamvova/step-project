@@ -1,0 +1,17 @@
+.items-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.item-block{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+}

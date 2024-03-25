@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter} from "react-router-dom";
 import Landing from './landing/Landing';
 import SignUp from './landing/SignUp/SignUp';
 import Profile from './main/profile/Profile';
+import Donate from './main/Donate/Donate';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Route path='/' Component={Landing}/>
         <Route path='/signup' Component={SignUp}/>
         <Route path='/profile' Component={Profile}/>
+        <Route path='/donate' Component={Donate}/>
       </Routes>
     </BrowserRouter>
   )

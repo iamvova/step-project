@@ -74,7 +74,23 @@ code {
   border: 2px solid  var(--color-black);
   color:  var(--color-white);
 }
-
+.white__btn-rev{
+  background-color: var(--color-black);
+  border: 2px solid  var(--color-black);
+  color:  var(--color-white);
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0.5rem 2rem;
+  border-radius: 2px;
+  transition: .3s ease-out !important;
+}
+.white__btn-rev:hover{
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid  var(--color-white);
+}
 
 .headtext{
   text-transform: uppercase;
