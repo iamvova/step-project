@@ -4,6 +4,7 @@ import Landing from './landing/Landing';
 import SignUp from './landing/SignUp/SignUp';
 import Profile from './main/profile/Profile';
 import Donate from './main/Donate/Donate';
+import Current from './main/components/DonateMainPage/CurrentFoundation/Current';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/signup' Component={SignUp}/>
         <Route path='/profile' Component={Profile}/>
         <Route path='/donate' Component={Donate}/>
+        <Route path='/foundation' Component={Current}/>
       </Routes>
     </BrowserRouter>
   )

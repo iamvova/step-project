@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 body{
-  overflow: hidden;
+  background-color: #ebebeb;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,8 +18,8 @@ body{
   --color-blakOverlay: rgba(0, 0, 0, 0.5);
 
   --color-darkblue: #030017;
-  --color-black: #4E4F55;
-  --color-white: #FFFFFF;
+  --color-black: #1c1c1c;
+  --color-white: #ebebeb;
   --color-yellow: yellow;
 }
 
@@ -99,14 +99,12 @@ code {
   font-weight: 600;
   font-size: 40px;
   line-height: 56px;
-  color: var(--color-white);
   padding-bottom: 40px;
 }
 .pre__title{
   font-family: var(--font);
   font-style: normal;
   font-size: 16px;
-  color: var(--color-yellow);
 }
 
 .p__text{
@@ -115,7 +113,6 @@ code {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: var(--color-white);
   opacity: .8;
   padding-bottom: 1.5rem;
 }
@@ -136,7 +133,9 @@ li{
 
 
 .yellow__p{
-  color: var(--color-yellow);
+  padding: 2px;
+  color: var(--color-white);
+  background: #766d62;
   text-decoration: underline;
 }
 .hr{
@@ -145,25 +144,50 @@ li{
   opacity: 0.5;
 }
 
+/* DEF BUTTON REVERSAL */
 .def__btn{
   font-family: var(--font);
   padding: 15px 50px;
   font-size: 15px;
   font-weight: bold;
   text-align: center;
-  color: #000;
-  background-color: #ffff04;
-  border: none;
-  border-radius: 15px;
+  color: var(--color-white);
+  border: 0;
+  background-color: var(--color-black);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .def__btn:hover {
-  background-color: #0056b3;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 .def__btn:active {
-  background-color: #004080;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
+/* DEF BUTTON REVERSAL */
+.def__btn-reversal{
+  font-family: var(--font);
+  padding: 15px 50px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  cursor: pointer;
+  border: 0;
+  transition: background-color 0.3s ease;
+}
+.def__btn-reversal:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+.def__btn-reversal:active {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+
 .t__center{
   text-align: center;
 }

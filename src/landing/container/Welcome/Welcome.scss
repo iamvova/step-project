@@ -1,17 +1,14 @@
 .welcome{
     padding: 100px 0;
-    background: rgb(0,0,46);
-    background: linear-gradient(0deg, rgba(0,0,46,1) 0%, rgba(3,0,23,1) 100%); 
-}
-.welcome__image{
-    & img{
-        width: 500px;
-    }
-}
-.welcome__text{
-    width: 500px;
+    background: url('../../../constants/images/2.jpg');
+    margin: 10px 40px;
+    background-attachment: fixed;
 }
 
+.welcome__text{
+    color: var(--color-white);
+    width: 500px;
+}
 
 .welcome__btn{
     font-family: var(--font);
@@ -33,7 +30,6 @@
         background-color: #004080;
     }
 }
-
 
 @media screen and (max-width: 1050px) {
     .welcome__container{

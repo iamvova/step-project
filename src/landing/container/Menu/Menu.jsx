@@ -43,7 +43,7 @@ const Menu = () => {
                   <li ><a href='#contacts'>Education</a></li>
               </ul>
               
-              <div className='connect__btn'><Link to='signup'><button>Connect Metamask</button></Link></div>
+              <div className='connect__btn'><Link to='signup'><button className='def__btn-reversal'>Connect Metamask</button></Link></div>
 
               <div className="app__navbar-smallscreen">
                 <div className='main__btn-connect'><Link to='signup'><button>Connect Metamask</button></Link></div>

@@ -7,14 +7,9 @@ const ProfileAvatar = ({address}) => {
     const [activeButton, setActiveButton] = useState(1);
 
     // Функції для зміни активної кнопки
-    const activateButton1 = () => {
-      setActiveButton(1);
-    };
-  
-    const activateButton2 = () => {
-      setActiveButton(2);
-    };
-
+    const activateButton1 = () => {setActiveButton(1)}
+    const activateButton2 = () => {setActiveButton(2)}
+    
     // Редактор адресу метамаску
     const showCharacters = (address) => {
         return `${address.slice(0, 5)}...${address.slice(-4)}`;

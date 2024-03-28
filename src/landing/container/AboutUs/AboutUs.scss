@@ -1,6 +1,4 @@
 .about__container{
-    background: var(--color-darkblue);
-    color: var(--color-white);
     padding: 100px 0;
 }
 
@@ -20,6 +18,12 @@
                 margin-right: 30px;
             }
         }
+    }
+}
+.about__image{
+    width: 500px;
+    & img{
+        width: 100%;
     }
 }
 
