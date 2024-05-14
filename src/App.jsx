@@ -14,7 +14,7 @@ const App = () => {
         <Route path='/signup' Component={SignUp}/>
         <Route path='/profile' Component={Profile}/>
         <Route path='/donate' Component={Donate}/>
-        <Route path='/foundation' Component={Current}/>
+        <Route path='/donate/foundation/:id' Component={Current}/>
       </Routes>
     </BrowserRouter>
   )

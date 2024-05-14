@@ -1,16 +1,30 @@
 import React from 'react'
 import './BuyNft.scss'
 
-const BuyNft = () => {
+const BuyNft = ({details}) => {
+
+  if (!details) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="wrapp">
       <div className='buy-container'>
-        <div className="buy-container__img"><img src="https://i.ebayimg.com/images/g/gi4AAOSwObJkXkSa/s-l400.jpg" alt="11" /></div>
+        <div className="buy-container__img"><img src={details.image} alt="11" /></div>
         <div className="buy-content">
-            <h2 className="buy-name">Lorem, ipsum dolor.</h2>
-            <p className="buy-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam vero consequuntur praesentium illum repellendus corporis ex minus id inventore.</p>
+            <h2 className="buy-name">{details.name}</h2>
+            <p className="buy-description">{details.description}</p>
+              <div className="progress-container">
+                <div className="progress-labels">
+                  <span>344</span>
+                  <span>10 000</span>
+                </div>
+                <div className="progress-bar">
+                  <progress value={344} max={10000}></progress>
+                </div>
+              </div>
             <div className='buy-btns'>
-                <input type="text" placeholder='0.1ETH' />
+                <input type="text" placeholder={details.min_price} />
                 <button className='buy-donate__btn'>Donate</button>
             </div>
         </div>

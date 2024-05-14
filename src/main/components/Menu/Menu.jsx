@@ -1,6 +1,7 @@
 import React from 'react'
 import './Menu.scss'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import AvatarIcon from '../../../constants/images/avatar.png'
 
 const Menu = ({address, menu}) => {
 
@@ -14,7 +15,7 @@ const Menu = ({address, menu}) => {
         <div className="menu">
             <div className='menu__navbar'>
               <Link to={'/profile'}><div className="logo">
-                  {/* <img src="/path/to/logo.png" alt="Logo" /> */}
+                  <img src={AvatarIcon} alt="Logo" />
                   <div></div>
               </div></Link>
               <Link to={menu === 'Donate' ? '/donate' : '/profile'}><div className='menu__navbar-text'>{menu}</div></Link>

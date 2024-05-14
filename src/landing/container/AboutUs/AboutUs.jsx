@@ -1,4 +1,5 @@
 import React from 'react'
+import aboutUs from '../../../constants/images/aboutUs.jpg'
 import './AboutUs.scss'
 
 const AboutUs = () => {
@@ -7,17 +8,17 @@ const AboutUs = () => {
         <div className="wrapp">
             <div className="about__container-wrap flex__sb">
                 <div className="about__text">
-                    <p className="pre__title">Lorem, ipsum.</p>
-                    <h2 className='headtext'>Lorem, ipsum dolor.</h2>
+                    <p className="pre__title">короткий опис</p>
+                    <h2 className='headtext'>Про проект</h2>
                     <ul>
-                        <li><img src="https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/secure.png" alt='1'></img> <p>Lorem ipsum dolor. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
-                        <li><img src="https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/credibility.png" alt='2'></img> <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illum eligendi recusandae veritatis.</p></li>
-                        <li><img src="https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/analysis.png" alt='3'></img> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea odit officiis culpa reprehenderit quisquam!</p></li>
-                        <li><img src="https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/buy.png" alt='4'></img> <p>Lorem ipsum dolor sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, animi.</p></li>
+                        <li> <p>Платформа дає змогу художникам створювати унікальні цифрові твори, які потім продаватимуться у вигляді NFT на аукціоні. Виручені кошти буде передано на підтримку різноманітних благодійних ініціатив.</p></li>
+                        <li> <p>Проект є повністю незалежним, що дозволяє нам забезпечити свободу вибору для наших користувачів. Ми створюємо зручне та інтуїтивно зрозуміле середовище для всіх користувачів, незалежно від їх рівня технічних знань чи досвіду. Наша платформа розроблена таким чином, щоб забезпечити легкий доступ до благодійності для кожного.</p></li>
+                        <li> <p>Проект сприятиме розвитку мистецтва та культури, збільшить свідомість про благодійність та пожертви, а також допоможе тим, хто потребує допомоги, через фінансову підтримку благодійних організацій.</p></li>
+                        <li> <p> Платформа створена за допомогою блокчейн технології. Це дозволяє забезпечити неперевершену безпеку, надійність та прозорість у всіх трансакціях, що відбуваються на нашій платформі.</p></li>
                     </ul>
                 </div>
                 <div className="about__image flex__center">
-                    <img src='https://kit.baliniz.com/cryptoxo/wp-content/uploads/sites/9/2021/05/Bitcoin-Analysis2.png' alt='1'/>
+                    <img src={aboutUs} alt='About us image'/>
                 </div>
             </div>
         </div>

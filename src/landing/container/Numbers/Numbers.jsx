@@ -52,15 +52,25 @@ const Numbers = () => {
 
   return (
     <div className="numbers__container">
-      <h2 className="headtext t__center">Lorem, ipsum dolor.</h2>
+      <h2 className="headtext t__center">Статистика</h2>
       <div className="wrapp">
           <div id="counter" className="numbers__counter flex__sb">
-          {counters.map((counter, index) => (
-            <div key={index} className={`counter-item counter-${index + 1}`}>
-              <span className="counter">{counter}</span>
-              <span className="counter-text">{`Проект ${index + 1}`}</span>
+            <div className={`counter-item counter-1`}>
+              <span className="counter">20</span>
+              <span className="counter-text">{`Закрито зборів`}</span>
             </div>
-          ))}
+            <div className={`counter-item counter-2}`}>
+            <span className="counter">30</span>
+            <span className="counter-text">{`Зібрано коштів`}</span>
+          </div>
+          <div className={`counter-item counter-3`}>
+          <span className="counter">40</span>
+          <span className="counter-text">{`Виграно NFT`}</span>
+        </div>
+        <div className={`counter-item counter-4}`}>
+        <span className="counter">50</span>
+        <span className="counter-text">{`Користувачі`}</span>
+      </div>
         </div>
       </div>
     </div>

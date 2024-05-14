@@ -1,6 +1,6 @@
 .numbers__container{
     padding: 100px 0;
-    background: url('../../../constants/images/1.jpg'); 
+    background: url('../../../constants/images/2.jpg'); 
     margin: 10px 40px;
     background-attachment: fixed;
 }
@@ -16,7 +16,9 @@
     align-items: center;
     flex-direction: column;
 }
-
+.counter-text{
+    font-size: 38px;
+}
 @media screen and (max-width: 950px) {
     .numbers__counter{
         flex-direction: column;

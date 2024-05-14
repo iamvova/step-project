@@ -30,6 +30,12 @@ h1,h2,h3,h4,h5,h6,p,a,li{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .flex__center {
   display: flex;
   justify-content: center;
@@ -67,6 +73,7 @@ code {
   font-weight: 400;
   padding: 0.5rem 2rem;
   border-radius: 2px;
+  margin-bottom: 10px;
   transition: .3s ease-out !important;
 }
 .white__btn:hover{

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ProfileAvatar.scss'
 import Items from './Items/Items';
 import Settings from './Settings/Settings';
+import AvatarIcon from '../../../constants/images/avatar.png'
 
 const ProfileAvatar = ({address}) => {
     const [activeButton, setActiveButton] = useState(1);
@@ -18,7 +19,7 @@ const ProfileAvatar = ({address}) => {
         <div className='wrapp'>
             <div className='container-avatar'>
                 <div className='avatar-img'>
-                    <div><img src="https://i.pinimg.com/originals/43/67/67/4367678a18ca980118e5404b2ae880e2.jpg" alt="111" /></div>
+                    <div><img src={AvatarIcon} alt="111" /></div>
                 </div>
                 <div className="avatar-btns">
                     <span>{showCharacters(address)}</span>
