@@ -16,9 +16,7 @@ const Current = () => {
       try {
         const response = await axios.get(`http://195.189.226.95/api/v1/auction/${id}/`)
         if (response.status === 200) {
-          const data = response.data
-          console.log(id)
-          setDetails(data[id])
+          setDetails(response.data)
         } else {
           console.error('Failed to fetch details from API')
         }

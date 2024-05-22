@@ -4,7 +4,7 @@ import './AboutUs.scss'
 
 const AboutUs = () => {
   return (
-    <div className='about__container'>
+    <div className='about__container' id='about'>
         <div className="wrapp">
             <div className="about__container-wrap flex__sb">
                 <div className="about__text">

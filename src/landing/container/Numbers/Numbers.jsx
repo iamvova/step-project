@@ -1,13 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Numbers.scss';
+import Loader from '../../../main/components/Loader/Loader';
 
 const Numbers = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   const [isInView, setIsInView] = useState(false);
 
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    axios.get('http://195.189.226.95/api/v1/statistic/')
+      .then(response => {
+        setData(response.data)
+      })
+      .catch(error => {
+        setError(error)
+      })
+  }, [])
   const startCounting = () => {
-    setIsInView(true);
-  };
+    setIsInView(true)
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,7 +47,7 @@ const Numbers = () => {
   useEffect(() => {
     let timer;
     if (isInView) {
-      const targetCounters = [100, 50, 75, 25];
+      const targetCounters = [data.closed_auctions, data.money_collected, data.gifted_nfts, data.users];
       timer = setInterval(() => {
         setCounters((prevCounters) => {
           return prevCounters.map((counter, index) => {
@@ -48,30 +63,32 @@ const Numbers = () => {
     return () => {
       clearInterval(timer);
     };
-  }, [isInView]);
+  }, [isInView, data]);
 
   return (
-    <div className="numbers__container">
+    <div className="numbers__container" id='statistic'>
       <h2 className="headtext t__center">Статистика</h2>
-      <div className="wrapp">
-          <div id="counter" className="numbers__counter flex__sb">
-            <div className={`counter-item counter-1`}>
-              <span className="counter">20</span>
-              <span className="counter-text">{`Закрито зборів`}</span>
+      (data &&
+        <div className="wrapp">
+            <div id="counter" className="numbers__counter flex__sb">
+              <div className={`counter-item counter-1`}>
+                <span className="counter">{data.closed_auctions}</span>
+                <span className="counter-text">{`Закрито зборів`}</span>
             </div>
             <div className={`counter-item counter-2}`}>
-            <span className="counter">30</span>
-            <span className="counter-text">{`Зібрано коштів`}</span>
+              <span className="counter">{data.money_collected}</span>
+              <span className="counter-text">{`Зібрано коштів`}</span>
+            </div>
+            <div className={`counter-item counter-3`}>
+              <span className="counter">{data.gifted_nfts}</span>
+              <span className="counter-text">{`Виграно NFT`}</span>
+            </div>
+            <div className={`counter-item counter-4}`}>
+              <span className="counter">{data.users}</span>
+              <span className="counter-text">{`Користувачі`}</span>
+            </div>
           </div>
-          <div className={`counter-item counter-3`}>
-          <span className="counter">40</span>
-          <span className="counter-text">{`Виграно NFT`}</span>
-        </div>
-        <div className={`counter-item counter-4}`}>
-        <span className="counter">50</span>
-        <span className="counter-text">{`Користувачі`}</span>
-      </div>
-        </div>
+        )
       </div>
     </div>
   );

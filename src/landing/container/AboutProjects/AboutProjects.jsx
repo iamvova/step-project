@@ -10,7 +10,7 @@ import './AboutProjects.scss'
 
 const AboutProjects = () => {
   return (
-    <div className='projects__container '>
+    <div className='projects__container ' id='founds'>
         <div className="wrapp">
                 {/* <p className="pre__title flex__center">Останні додані ніціативи</p> */}
                 <h2 className='headtext flex__center'>Останні додані ніціативи</h2>

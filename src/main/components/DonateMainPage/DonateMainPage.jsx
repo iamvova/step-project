@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react'
 import './DonateMainPage.scss'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 const DonateMainPage = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
   const backendUrl = 'http://195.189.226.95/api/v1/auction/' 
   
   useEffect(() => {
@@ -34,8 +35,8 @@ const DonateMainPage = () => {
   return (
     <div className='wrapp'>
       <div className="donate-container d-flex">
-        {data ? data.map((item, index) => (
-          <React.Fragment key={index}>
+        {data ? data.map((item) => (
+          <React.Fragment key={item.id}>
             <Link to={`/donate/foundation/${item.id}`}>
               <div className="donate-page flex__column">
                 <img src={item.image} alt={item.name} />
@@ -43,7 +44,7 @@ const DonateMainPage = () => {
               </div>
             </Link>
           </React.Fragment>
-        )) : <div>Error</div>}
+        )) : <Loader></Loader>}
       </div>
     </div>
   )

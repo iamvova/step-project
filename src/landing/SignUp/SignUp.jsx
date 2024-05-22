@@ -3,6 +3,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { useNavigate  } from 'react-router-dom';
 import { CgClose } from 'react-icons/cg'
 import secure from '../../constants/images/secure.png'
+import axios from 'axios'
+
 import '../container/Menu/Menu.scss'
 import './SignUp.scss'
 
@@ -12,6 +14,9 @@ const SignUp = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [hideBurger, setHideBurger] = useState(true)
     const [address, setAddress] = useState()
+
+    const [accessToken, setAccessToken] = useState('');
+    const [refreshToken, setRefreshToken] = useState('');
     
     const [accounts, setAccounts] = useState([])
     const [buttonClicked, setButtonClicked] = useState(false)
@@ -101,14 +106,15 @@ const SignUp = () => {
       try {
         const response = await fetch(`${backendURL}`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: {'Content-Type': 'application/json',},
           body: JSON.stringify({ signature: signature, public_key: account }),
         })
     
         if (response.ok) {
           const data = await response.json()
+          localStorage.setItem('refresh', data.refresh)
+          localStorage.setItem('access', data.access);
+          console.log(data.refresh);
           navigate('/profile')
         } else {
           console.error('Failed to send signature to backend')
@@ -117,6 +123,7 @@ const SignUp = () => {
         console.error('Error sending signature to backend:', error)
       }
     }
+
 
   return (
     <div>

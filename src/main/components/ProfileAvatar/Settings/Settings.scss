@@ -1,13 +1,15 @@
-.set-container{
+.set-container {
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
 }
-.set-content{
+.set-content form{
     display: flex;
     flex-direction: column;
     margin-top: 100px;
 
     & input {
+      margin-top: 10px;
       margin-bottom: 30px;
       padding: 10px 50px 10px 10px;  
     }

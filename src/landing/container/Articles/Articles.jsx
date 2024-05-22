@@ -6,7 +6,7 @@ import './Articles.scss'
 
 const Articles = () => {
   return (
-    <div className='articles__container'> 
+    <div className='articles__container' id='study'> 
       <div className="wrapp">
       <p className="pre__title t__center">Як користуватися платформою</p>
       <h2 className="headtext t__center">Навчання</h2>

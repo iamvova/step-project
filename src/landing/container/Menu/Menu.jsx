@@ -39,9 +39,9 @@ const Menu = () => {
               <ul className={onScroll ? 'app__main-list app__list-white' : 'app__main-list app__list-black'}>
                   <li ><a href='#main'>Головна</a></li>
                   <li ><a href='#about'>Про проект</a></li>
-                  <li ><a href='#price'>Фонди</a></li>
-                  <li ><a href='#gallery'>Статистика</a></li>
-                  <li ><a href='#contacts'>Навчання</a></li>
+                  <li ><a href='#founds'>Фонди</a></li>
+                  <li ><a href='#statistic'>Статистика</a></li>
+                  <li ><a href='#study'>Навчання</a></li>
               </ul>
               
               <div className='connect__btn'><Link to='signup'><button className='def__btn-reversal'>Увійти</button></Link></div>
@@ -55,9 +55,9 @@ const Menu = () => {
                           <ul className="app__navbar-smallscreen-links">
                               <li onClick={handleOpenMenu}><a href='#main'>Головна</a></li>
                               <li onClick={handleOpenMenu}><a href='#about'>Про проект</a></li>
-                              <li onClick={handleOpenMenu}><a href='#price'>Фонди</a></li>
-                              <li onClick={handleOpenMenu}><a href='#gallery'>Статистика</a></li>
-                              <li onClick={handleOpenMenu}><a href='#contacts'>Навчання</a></li>
+                              <li onClick={handleOpenMenu}><a href='#founds'>Фонди</a></li>
+                              <li onClick={handleOpenMenu}><a href='#statistic'>Статистика</a></li>
+                              <li onClick={handleOpenMenu}><a href='#study'>Навчання</a></li>
                           </ul>
                       </div>
                   )}
